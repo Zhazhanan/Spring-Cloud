@@ -9,7 +9,13 @@ spring:
     name: config-client
   cloud:
     config:
+      discovery:
+        enabled: true
+        service-id: config-server
       label: master
       profile: dev
-#      uri: http://config-server/
-      uri: http://127.0.0.1:9002/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh

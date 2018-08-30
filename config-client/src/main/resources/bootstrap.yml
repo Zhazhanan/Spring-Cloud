@@ -1,0 +1,15 @@
+server:
+  port: 9003
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+#      uri: http://config-server/
+      uri: http://127.0.0.1:9002/

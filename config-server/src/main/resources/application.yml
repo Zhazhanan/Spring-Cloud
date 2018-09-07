@@ -19,4 +19,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Zhazhanan/springCloudConfig
+          uri: https://github.com/Zhazhanan/Spring-Cloud
+          search-paths: config-server

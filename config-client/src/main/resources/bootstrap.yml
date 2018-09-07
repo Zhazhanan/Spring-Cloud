@@ -1,5 +1,10 @@
 server:
   port: 9003
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 eureka:
   client:
     serviceUrl:
@@ -14,8 +19,8 @@ spring:
         service-id: config-server
       label: master
       profile: dev
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,refresh
+      retry:
+        max-attempts: 6 #重试次数
+        multiplier: 1.1 # 间隔乘数
+        initial-interval: 1000 # 初始重试间隔时间ms
+        max-interval: 2000 # 最大间隔时间ms

@@ -16,8 +16,8 @@ public class IndexController {
     @Value("${ip}")
     private String ip;
 
-    @GetMapping("/from")
-    public String from() {
+    @GetMapping("/ip")
+    public String getIp() {
         return this.ip;
     }
 

@@ -17,4 +17,4 @@ eureka:
   client:
     eureka-server-u-r-l-context: http://${eureka.instance.hostname}:${server.port}/eureka/
     register-with-eureka: true # 是否将自己注册到Eureka Server，默认为true
-    fetch-registry: true # 是否从Eureka Server获取注册信息，默认为true，集群时同步其它节点数据
+    fetch-registry: false # 是否从Eureka Server获取注册信息，默认为true，集群时同步其它节点数据
